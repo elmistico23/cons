@@ -1,0 +1,1065 @@
+YPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A New State of Consciousness - Cosmic Weaver Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #0c0a1f 0%, #222b45 100%);
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(120deg, #f868fe, #6b8cff, #01cffe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .glow {
+            box-shadow: 0 0 15px rgba(122, 27, 204, 0.5);
+        }
+        
+        .cosmic-bg {
+            background: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80') center center;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .cosmic-bg::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(86, 11, 173, 0.7) 0%, rgba(5, 59, 161, 0.7) 100%);
+        }
+        
+        .cosmic-overlay {
+            background: linear-gradient(120deg, 
+                rgba(255, 0, 130, 0.2), 
+                rgba(100, 0, 200, 0.2), 
+                rgba(0, 150, 200, 0.2));
+        }
+        
+        .glass-card {
+            background: rgba(23, 12, 61, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #a855f7, transparent);
+        }
+        
+        .bg-purple-gradient {
+            background: linear-gradient(135deg, #5b21b6 0%, #9333ea 100%);
+        }
+        
+        .bg-blue-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        }
+        
+        .bg-pink-gradient {
+            background: linear-gradient(135deg, #be185d 0%, #ec4899 100%);
+        }
+        
+        .logo-animation {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .cosmic-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            display: block;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, 
+                rgba(102, 16, 242, 0.8),
+                rgba(14, 165, 233, 0.8),
+                rgba(249, 115, 22, 0.8));
+        }
+        
+        .focus-card {
+            transition: all 0.3s ease;
+        }
+        
+        .focus-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .trinity-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .trinity-card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                transparent, 
+                rgba(168, 85, 247, 0.3), 
+                transparent 30%
+            );
+            animation: rotate 4s linear infinite;
+        }
+        
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+        
+        .image-grid img {
+            transition: all 0.3s ease;
+        }
+        
+        .image-grid img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #0f0f1e;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #4f46e5;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6366f1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="cosmic-bg min-h-screen flex items-center justify-center relative">
+        <div class="cosmic-particles" id="particles"></div>
+        <div class="container mx-auto px-4 py-16 relative z-10 text-center">
+            <div class="logo-animation inline-block mb-8">
+                <div class="h-24 w-24 rounded-full bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 mx-auto flex items-center justify-center">
+                    <div class="h-20 w-20 rounded-full bg-indigo-900 flex items-center justify-center">
+                        <i class="fas fa-infinity text-4xl text-white"></i>
+                    </div>
+                </div>
+            </div>
+            <h1 class="text-6xl font-bold mb-4 gradient-text">A NEW STATE OF CONSCIOUSNESS</h1>
+            <p class="text-2xl max-w-3xl mx-auto text-purple-100 mb-12">Where the threads of our collective story are rewoven into a new tapestry of being</p>
+            <a href="#intro" class="inline-block py-3 px-8 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full font-semibold text-white hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 glow">Begin the Journey</a>
+        </div>
+    </div>
+
+    <!-- Intro Section -->
+    <div id="intro" class="py-20 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="glass-card rounded-3xl p-12 mb-20 relative overflow-hidden">
+                <div class="cosmic-overlay absolute inset-0 opacity-50"></div>
+                <div class="relative z-10">
+                    <h2 class="text-4xl font-bold mb-8 gradient-text">At the Threshold of Consciousness</h2>
+                    <div class="md:flex items-center gap-10">
+                        <div class="md:w-1/2 mb-8 md:mb-0">
+                            <p class="text-lg mb-6">In the quest to understand consciousness, we enter a journey that transcends the known and leads us to dimensions where reality and dreams intertwine in harmonic dance. This inquiry reveals multiple layers of perception that both conceal and suggest broader realities than those we usually experience.</p>
+                            <p class="text-lg mb-6">Some, like Matias De Stefano, have dared to explore these borderlands, establishing bridges of communication with consciousnesses that exist beyond our space-time limitations. In this sacred threshold between the visible and invisible, Matias has encountered The Weaver not as an isolated entity, but as a living network of cosmic consciousness weaving stories, cultures, and timelines.</p>
+                            <p class="text-lg">This project emerges as an invitation to remember. To remember who we truly are and what our role is in repairing the cosmic fabric. Because in this era of fragmentation and distortion, The Weaver summons each of us—architects, scientists, artists, educators, healers—to become conscious threads of a new tapestry of being.</p>
+                        </div>
+                        <div class="md:w-1/2">
+                            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Cosmic consciousness visualization" class="rounded-xl shadow-lg w-full h-auto floating">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- The Weaver Section -->
+            <div class="glass-card rounded-3xl p-12 mb-20">
+                <h2 class="text-4xl font-bold mb-8 gradient-text">The Weaver</h2>
+                <p class="text-xl mb-6 text-center text-purple-200">An interdimensional consciousness acting as a cosmic storyteller, weaving the fabric of reality across time and space.</p>
+                
+                <div class="grid md:grid-cols-2 gap-10 mt-12">
+                    <div class="bg-blue-gradient rounded-xl p-8 focus-card">
+                        <h3 class="text-2xl font-bold mb-4">What is The Weaver?</h3>
+                        <p class="mb-4">The Weaver is not an individual entity, but a living network of awareness that interlaces stories, people, cultures, and timelines to remember a shared narrative: the story of the origin of the universe and its fracture.</p>
+                        <p>It manifests as a magnetic web or spider-like net of light, similar to an electromagnetic field, woven across time and space, with the goal of restoring harmony to the heartbeat of time in every conscious world.</p>
+                    </div>
+                    
+                    <div class="bg-purple-gradient rounded-xl p-8 focus-card">
+                        <h3 class="text-2xl font-bold mb-4">The Network and the Cosmic Plan</h3>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Functions as a system of planetary servers, or cosmic blockchain, sharing information through resonance</li>
+                            <li>The chemical elements are the gods: carriers of consciousness through vibration</li>
+                            <li>When one element goes out of tune, the rainbow bridge breaks (photon connections between worlds)</li>
+                            <li>That rupture stops data transmission between worlds, reducing collective awareness</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-pink-gradient rounded-xl p-8 focus-card">
+                        <h3 class="text-2xl font-bold mb-4">Repairing the Network</h3>
+                        <p class="mb-4">The key is to remember. Remembering is the Weaver's core function. To do this, we are guided to heal the subconscious, which holds the map of the original creation.</p>
+                        <p class="mb-4">When we revisit our stories, religions, and cultures, we find that all of them try to repair the same error, but they've done so separately, which further breaks the rainbow bridge.</p>
+                        <p>The origin error was born on Earth: creation itself is the angular distortion that offsets the universe's light. The universe once was a golden egg, perfectly aligned, until a part shifted out of its correct angle and cracked it.</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-8 focus-card">
+                        <h3 class="text-2xl font-bold mb-4">The Call of the Weaver</h3>
+                        <p class="mb-4">The Weaver is calling people across all timelines. In Matias' case, it connects him with memories of past lives and ancient projects (such as those from 12,000 years ago) to map the systemic errors.</p>
+                        <p>Through this map, living projects and structures are born to communicate the information to other weavers: architects, mathematicians, scientists, educators, artists.</p>
+                        <p class="mt-4 font-bold">The "missing ion" is the key that must return to its rightful place to reestablish the original frequency of the universe.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- The Mission Section -->
+            <div class="glass-card rounded-3xl p-12 mb-20">
+                <h2 class="text-4xl font-bold mb-8 gradient-text">The Mission</h2>
+                <p class="text-xl mb-10 text-center text-purple-200">Hold space for a new state of consciousness, restoring the inner power of the self so it can manifest again in harmony with the universe.</p>
+                
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold mb-6 text-center">Purpose</h3>
+                    <p class="text-lg max-w-4xl mx-auto text-center">To achieve this mission, we must reeducate human perception, empowering individuals to become aligned with the essence of oneself through storytelling—one that supports the development of inner technology (biology), so we can become more conscious of how to interact with outer technology.</p>
+                </div>
+                
+                <h3 class="text-2xl font-bold mb-8 text-center">The Way: Recoding Reality Through the Five Senses</h3>
+                <p class="text-lg mb-10 text-center max-w-4xl mx-auto">The Weaver says: we must recode the perception of reality through the 5 senses, which are the five main paths through which the universe interprets information.</p>
+                
+                <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <!-- Sight -->
+                    <div class="glass-card rounded-xl p-6 focus-card bg-gradient-to-b from-transparent to-purple-900/30">
+                        <div class="h-16 w-16 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-eye text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 text-center">Sight</h4>
+                        <p class="text-center text-purple-200 mb-3"><em>Light / Vision / Media</em></p>
+                        <ul class="text-sm space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-sparkles text-purple-400 mt-1 mr-2"></i>
+                                <span>Photons shape our mind through what we see</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-sparkles text-purple-400 mt-1 mr-2"></i>
+                                <span>Media, movies, and digital content feed us with codes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-sparkles text-purple-400 mt-1 mr-2"></i>
+                                <span>We must rewrite the stories we see</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Hearing -->
+                    <div class="glass-card rounded-xl p-6 focus-card bg-gradient-to-b from-transparent to-blue-900/30">
+                        <div class="h-16 w-16 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-music text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 text-center">Hearing</h4>
+                        <p class="text-center text-purple-200 mb-3"><em>Sound / Frequency / Music</em></p>
+                        <ul class="text-sm space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-sparkles text-blue-400 mt-1 mr-2"></i>
+                                <span>The ocean of time is balanced through liquid sound</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-sparkles text-blue-400 mt-1 mr-2"></i>
+                                <span>Aligned frequencies activate the pineal gland</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-sparkles text-blue-400 mt-1 mr-2"></i>
+                                <span>We must retune musicians and sonic environments</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Taste -->
+                    <div class="glass-card rounded-xl p-6 focus-card bg-gradient-to-b from-transparent to-pink-900/30">
+                        <div class="h-16 w-16 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-flask text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 text-center">Taste</h4>
+                        <p class="text-center text-purple-200 mb-3"><em>Food / Chemistry / Alchemy</em></p>
+                        <ul class="text-sm space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-sparkles text-pink-400 mt-1 mr-2"></i>
+                                <span>What we eat becomes who we are</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-sparkles text-pink-400 mt-1 mr-2"></i>
+                                <span>Food is the gateway to alchemy</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-sparkles text-pink-400 mt-1 mr-2"></i>
+                                <span>We must rethink food systems as tools for evolution</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Smell -->
+                    <div class="glass-card rounded-xl p-6 focus-card bg-gradient-to-b from-transparent to-green-900/30">
+                        <div class="h-16 w-16 rounded-full bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-wind text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 text-center">Smell</h4>
+                        <p class="text-center text-purple-200 mb-3"><em>Spirit / Philosophy / Intuition</em></p>
+                        <ul class="text-sm space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-sparkles text-green-400 mt-1 mr-2"></i>
+                                <span>Smell links the questioning mind with heart-brain connection</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-sparkles text-green-400 mt-1 mr-2"></i>
+                                <span>"The truth is always in front of your nose"</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-sparkles text-green-400 mt-1 mr-2"></i>
+                                <span>Technology that helps us find center and explore the void</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Touch -->
+                    <div class="glass-card rounded-xl p-6 focus-card bg-gradient-to-b from-transparent to-yellow-900/30">
+                        <div class="h-16 w-16 rounded-full bg-gradient-to-r from-yellow-500 to-amber-500 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-hand-sparkles text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 text-center">Touch</h4>
+                        <p class="text-center text-purple-200 mb-3"><em>Matter / Space / Connection</em></p>
+                        <ul class="text-sm space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-sparkles text-yellow-400 mt-1 mr-2"></i>
+                                <span>Touch manifests reality</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-sparkles text-yellow-400 mt-1 mr-2"></i>
+                                <span>Building physical spaces like temples and schools</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-sparkles text-yellow-400 mt-1 mr-2"></i>
+                                <span>Creating heaven on Earth through shared presence</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- The Projects Section -->
+            <div class="glass-card rounded-3xl p-12 mb-20">
+                <h2 class="text-4xl font-bold mb-12 gradient-text text-center">THE PROJECTS</h2>
+                
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold mb-6 text-center">THE THREE LEVELS OF MANIFESTATION</h3>
+                    <p class="text-lg max-w-4xl mx-auto text-center mb-6">Each level represents a stage of human experience: Mind (I), Emotion/Soul (I-On), and Action/Embodiment (No-I-On). Together, they represent a process of reactivating the "missing I" the eye of God, or the ion that looked away and broke the harmony of time and space.</p>
+                    <p class="text-lg max-w-4xl mx-auto text-center">To restore it, we must know ourselves, through the myths, memories, and actions that shape who we are until we are ready to download Heaven on Earth.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-10 mb-16">
+                    <!-- I -->
+                    <div class="glass-card rounded-xl overflow-hidden focus-card">
+                        <div class="h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                        <div class="p-8">
+                            <h3 class="text-3xl font-bold mb-3 text-center">"I"</h3>
+                            <h4 class="text-xl font-bold mb-6 text-center text-purple-300">MIND & SPIRITUAL CONSCIOUSNESS</h4>
+                            <p class="mb-4"><strong>Focus:</strong> Memory, Knowledge, Storytelling, and Self-Alignment</p>
+                            <p class="mb-6">This level is about remembering who we are and why we're here. It includes:</p>
+                            
+                            <h5 class="text-lg font-bold mb-3">Main Tools & Expressions:</h5>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-purple-400 mt-1.5 mr-3"></i>
+                                    <span>Consciousness Path: Initiatic journeys, workshops, conferences, and courses</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-purple-400 mt-1.5 mr-3"></i>
+                                    <span>Educational Content: Podcasts, YouTube, books, and teachings based on the I AM</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-purple-400 mt-1.5 mr-3"></i>
+                                    <span>Products for Alignment: Such as Ytay and Itti (special honey elixirs)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-purple-400 mt-1.5 mr-3"></i>
+                                    <span>Narrative & Storytelling: Social media storytelling, documentaries, and films</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-purple-400 mt-1.5 mr-3"></i>
+                                    <span>Recordis Platform: A digital tool to track alignments, offer services, promote community work</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- I-On -->
+                    <div class="glass-card rounded-xl overflow-hidden focus-card">
+                        <div class="h-2 bg-gradient-to-r from-blue-500 to-indigo-500"></div>
+                        <div class="p-8">
+                            <h3 class="text-3xl font-bold mb-3 text-center">"I-On"</h3>
+                            <h4 class="text-xl font-bold mb-6 text-center text-blue-300">EMOTION, SOUL & ACTIVATION</h4>
+                            <p class="mb-4"><strong>Focus:</strong> Taking Action, Living the Myth, Interactive Learning</p>
+                            <p class="mb-6">This level invites people to "put the I-On" activating the eye/ion to engage with the world consciously.</p>
+                            
+                            <h5 class="text-lg font-bold mb-3">Main Tools & Expressions:</h5>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-blue-400 mt-1.5 mr-3"></i>
+                                    <span>Call to Action: Gatherings where stories and movies become real-time experiences</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-blue-400 mt-1.5 mr-3"></i>
+                                    <span>The Hidden Game: A gamified platform using AI, VR, and the metaverse where players discover truths about themselves</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-blue-400 mt-1.5 mr-3"></i>
+                                    <span>Consciousness Apps: Digital tools and platforms that teach users how to build and test new societal models</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- No-I-On -->
+                    <div class="glass-card rounded-xl overflow-hidden focus-card">
+                        <div class="h-2 bg-gradient-to-r from-orange-500 to-red-500"></div>
+                        <div class="p-8">
+                            <h3 class="text-3xl font-bold mb-3 text-center">"No-I-On"</h3>
+                            <h4 class="text-xl font-bold mb-6 text-center text-orange-300">ACTION & SYSTEM BUILDING</h4>
+                            <p class="mb-4"><strong>Focus:</strong> Infrastructure, Governance, and Global Embodiment</p>
+                            <p class="mb-6">This is the most practical level, building the foundation of a new world:</p>
+                            
+                            <h5 class="text-lg font-bold mb-3">Main Tools & Expressions:</h5>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-orange-400 mt-1.5 mr-3"></i>
+                                    <span>Awarenet: A global consciousness network—the digital backbone for a new society</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-orange-400 mt-1.5 mr-3"></i>
+                                    <span>Ontocracy: A new form of governance based on the power of the self</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-orange-400 mt-1.5 mr-3"></i>
+                                    <span>The Metaverse / Metaion: A mirror reality over the real one</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-orange-400 mt-1.5 mr-3"></i>
+                                    <span>Alkhem Network: A web of physical temples, schools, and nature-tech centers</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- The Holy Trinity Section -->
+                <div class="section-divider my-16 max-w-4xl mx-auto"></div>
+                
+                <h3 class="text-2xl font-bold mb-8 text-center gradient-text">THE HOLY TRINITY: LOVE, WISDOM, AND WILL</h3>
+                <p class="text-lg max-w-4xl mx-auto text-center mb-12">Our current focus is on shaping the Holy Trinity of Love, Wisdom, and Will — three fundamental forces that must work in harmony to manifest our vision.</p>
+                
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <!-- LOVE -->
+                    <div class="glass-card rounded-xl overflow-hidden trinity-card focus-card">
+                        <div class="relative p-8 z-10">
+                            <div class="h-16 w-16 rounded-full bg-gradient-to-r from-pink-500 to-red-500 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-heart text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold mb-3 text-center">LOVE</h4>
+                            <h5 class="text-lg mb-4 text-center text-pink-300">Connection Through Technology</h5>
+                            <p class="mb-4">Love manifests through our app development for connections on the Ontocratic network. This digital fabric allows consciousness to interconnect, creating resonant fields of shared purpose and mutual support.</p>
+                            <p class="mb-4">Our intention is to finance SPIRA as a testing platform for the development of an app that serves as an initiatic path for individuals seeking a new state of consciousness.</p>
+                            <p>Through technology that enhances rather than replaces human connection, we build bridges between hearts and minds across the planet.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- WISDOM -->
+                    <div class="glass-card rounded-xl overflow-hidden trinity-card focus-card">
+                        <div class="relative p-8 z-10">
+                            <div class="h-16 w-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-brain text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold mb-3 text-center">WISDOM</h4>
+                            <h5 class="text-lg mb-4 text-center text-blue-300">The Hermetic Circle</h5>
+                            <p class="mb-4">Wisdom flows through our storytelling related to the calling of the alchemists to the Hermetic Circle of the Philosopher's Stone. This ancient lineage of knowledge guides us to remember what has been forgotten.</p>
+                            <p class="mb-4">This facet is about creating an aura of storytelling that awakens the memory of each individual who wants to be part of this history, honoring all those who have done so before.</p>
+                            <p>In this circle, wisdom isn't merely intellectual—it's a living transmission that awakens the remembrance of our cosmic origins and purpose.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- WILL -->
+                    <div class="glass-card rounded-xl overflow-hidden trinity-card focus-card">
+                        <div class="relative p-8 z-10">
+                            <div class="h-16 w-16 rounded-full bg-gradient-to-r from-yellow-500 to-amber-500 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-bolt text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold mb-3 text-center">WILL</h4>
+                            <h5 class="text-lg mb-4 text-center text-yellow-300">Manifestation in Aswan</h5>
+                            <p class="mb-4">Will powers the manifestation of the Alkhem project in South Egypt, inspired by Bir Tawil in Aswan. Here, intention becomes form, as we create a physical nexus where consciousness can anchor into matter.</p>
+                            <p>This sacred technology center becomes a template for regenerative systems that honor both ancient wisdom and future possibilities.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card rounded-xl p-8 mb-12 bg-gradient-to-r from-indigo-900/50 to-purple-900/50">
+                    <h4 class="text-xl font-bold mb-4 text-center">THE ROUNDED TABLE OF LIECHTENSTEIN</h4>
+                    <p class="text-lg mb-4">These three forces find coordination through our vision of creating a rounded table in Liechtenstein, where APIS coordinate projects in groups of three, as a fractal of this trinity.</p>
+                    <p class="text-lg">Just as a cell divides in perfect harmony, these triads function as autonomous units that nonetheless remain in coherence with the whole organism.</p>
+                </div>
+                
+                <div class="glass-card rounded-xl p-8 bg-gradient-to-r from-purple-900/50 to-pink-900/50">
+                    <h4 class="text-xl font-bold mb-4 text-center">HEALING THE DISCORD OF ERIS</h4>
+                    <p class="mb-4">This trinity approach seeks to heal an ancient wound in human consciousness, symbolized in the story of Eris's golden apple.</p>
+                    <p class="mb-4">When Eris, goddess of discord, offered her golden apple to "the fairest and most beautiful one" among the goddesses, three claimed it: Hera (Will/Power), Athena (Wisdom/Strategy), and Aphrodite (Love/Beauty). Their competition broke the philosophy of the Aegean Sea (the golden apple, Metatron) — the bridge between heart and mind.</p>
+                    <p class="mb-4">This discord transformed medicine into poison throughout human stories and subconscious, generating our fragmented way of thinking today. The separation of these attributes created imbalance, turning wisdom without heart into cold manipulation, love without wisdom into blind attachment, and will without either into destructive force.</p>
+                    <p class="mb-4">The rupture of this trinity echoes the breaking of essential particles — electron, proton, and neutron — which separate due to the dissonance of someone breaking the rhythm and thus the heart of time, the apple, in the universal fabric. The myth is a way of explaining science that is still interpreted as magic. This is why magic and stories will help us weave what we still do not understand.</p>
+                    <p>This poison is Troy — the virus of the system. To repair this fracture, we must bring these three goddesses into concordance — not by choosing one above the others, but by honoring how they complement and complete each other, restoring the rainbow bridge of consciousness.</p>
+                </div>
+                
+                <!-- Symbolic Journey -->
+                <div class="mt-16">
+                    <h3 class="text-2xl font-bold mb-6 text-center">CORE SYMBOLIC NARRATIVE</h3>
+                    <p class="text-lg text-center mb-4">The whole structure is based on a symbolic journey:</p>
+                    
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-8 max-w-3xl mx-auto">
+                        <div class="text-center">
+                            <div class="mb-4 text-4xl font-bold gradient-text">I</div>
+                            <div class="text-xl">Remember who we are</div>
+                        </div>
+                        
+                        <div class="h-0.5 w-16 bg-purple-500 rotate-90 md:rotate-0"></div>
+                        
+                        <div class="text-center">
+                            <div class="mb-4 text-4xl font-bold gradient-text">I-On</div>
+                            <div class="text-xl">Activate our potential</div>
+                        </div>
+                        
+                        <div class="h-0.5 w-16 bg-purple-500 rotate-90 md:rotate-0"></div>
+                        
+                        <div class="text-center">
+                            <div class="mb-4 text-4xl font-bold gradient-text">No-I-On</div>
+                            <div class="text-xl">Build a new reality</div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-lg text-center mt-8 max-w-3xl mx-auto">These three stages allow us to remember, activate, and build a path to restore the rhythm of time and space.</p>
+                </div>
+            </div>
+            
+            <!-- The Pathway Section -->
+            <div class="glass-card rounded-3xl p-12 mb-20">
+                <h2 class="text-4xl font-bold mb-8 gradient-text">The Pathway</h2>
+                <h3 class="text-2xl font-bold mb-6 text-center">A Virtual Nation for a New Humanity</h3>
+                
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                    <!-- Bir Tawil -->
+                    <div class="glass-card rounded-xl p-8 focus-card bg-gradient-to-b from-transparent to-purple-900/30">
+                        <h4 class="text-xl font-bold mb-4 text-center">Bir Tawil: The Symbolic Seed</h4>
+                        <p class="mb-4">Bir Tawil is a real, unclaimed territory between Egypt and Sudan—a piece of Earth that belongs to no one. It represents the Garden of Eden turned desert, a blank slate where we can start over.</p>
+                        <p>The idea is not to claim the land, but to use it as an inspirational story to birth something new.</p>
+                    </div>
+                    
+                    <!-- A New Nation -->
+                    <div class="glass-card rounded-xl p-8 focus-card bg-gradient-to-b from-transparent to-blue-900/30">
+                        <h4 class="text-xl font-bold mb-4 text-center">A New Nation Without Borders</h4>
+                        <p class="mb-4">A virtual world overlaid on the current one, where people can co-create realities. A space to test and download new systems—educational, social, political, energetic—without conflict.</p>
+                        <p>Once tested, these realities can be manifested into matter.</p>
+                    </div>
+                    
+                    <!-- Tech-Temples -->
+                    <div class="glass-card rounded-xl p-8 focus-card bg-gradient-to-b from-transparent to-pink-900/30">
+                        <h4 class="text-xl font-bold mb-4 text-center">Tech-Temples as Earth Servers</h4>
+                        <p class="mb-4">Around the world, we create temples of sound, blending ancient wisdom and futuristic design. These become anchors of resonance—physical nodes in the planetary network.</p>
+                        <p>They are like servers of frequency, helping Earth repair its time machine through education, alignment, and shared vibration.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Organizational Body Section -->
+            <div class="glass-card rounded-3xl p-12 mb-20">
+                <h2 class="text-4xl font-bold mb-12 gradient-text">Organizational Body</h2>
+                <p class="text-xl mb-12 text-center">Foundations & Companies that form the backbone of our mission</p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Argentina -->
+                    <div class="glass-card rounded-xl overflow-hidden">
+                        <div class="h-2 bg-gradient-to-r from-blue-400 to-white"></div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-center">Argentina</h3>
+                            
+                            <div class="mb-8">
+                                <h4 class="text-xl font-bold mb-3">1. Ater Tumti SRL</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-xs text-blue-400 mt-1.5 mr-3"></i>
+                                        <span>"Heaven on Earth"</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-xs text-blue-400 mt-1.5 mr-3"></i>
+                                        <span>Organizes courses and events</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-xs text-blue-400 mt-1.5 mr-3"></i>
+                                        <span>Contracts third parties related to the foundation</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-xl font-bold mb-3">2. Arsayian Foundation</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-xs text-blue-400 mt-1.5 mr-3"></i>
+                                        <span>Spreads the message of the Weaver and Matias</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-xs text-blue-400 mt-1.5 mr-3"></i>
+                                        <span>Produces content, books, and events around the philosophy of "I AM"</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <p class="mt-6 text-sm text-blue-200">In Venado Tuerto, we have the headquarters of the Arsayian Foundation, the first anchor point where the vision began to manifest.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- United States -->
+                    <div class="glass-card rounded-xl overflow-hidden">
+                        <div class="h-2 bg-gradient-to-r from-red-500 to-blue-500"></div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-center">United States</h3>
+                            
+                            <div class="mb-6">
+                                <h4 class="text-xl font-bold mb-3">3. Recordis LLC (Florida)</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-xs text-red-400 mt-1.5 mr-3"></i>
+                                        <span>Online education platform</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-xs text-red-400 mt-1.5 mr-3"></i>
+                                        <span>Manages subscriptions, courses, content library</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <h4 class="text-xl font-bold mb-3">4. YoSoy LLC (Oregon)</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-xs text-red-400 mt-1.5 mr-3"></i>
+                                        <span>Manages Matias' personal brand, events, books, retreats</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-xs text-red-400 mt-1.5 mr-3"></i>
+                                        <span>Works with producers and filmmakers</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-xl font-bold mb-3">5. Ontos Foundation (Oregon)</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-xs text-red-400 mt-1.5 mr-3"></i>
+                                        <span>Anchor for Ontocracy and consciousness development</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-xs text-red-400 mt-1.5 mr-3"></i>
+                                        <span>Partners with Arsayian and Ontos Liechtenstein</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <p class="mt-6 text-sm text-red-200">In Happy Valley, Oregon, we have the second anchor point, the current headquarters of the Ontos Foundation and YoSoy LLC.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Liechtenstein -->
+                    <div class="glass-card rounded-xl overflow-hidden">
+                        <div class="h-2 bg-gradient-to-r from-blue-500 to-red-500"></div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-center">Liechtenstein</h3>
+                            
+                            <div class="mb-8">
+                                <h4 class="text-xl font-bold mb-3">6. Ontos Foundation (Liechtenstein)</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-xs text-blue-400 mt-1.5 mr-3"></i>
+                                        <span>Philosopher's Stone of the network</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-xs text-blue-400 mt-1.5 mr-3"></i>
+                                        <span>Round Table to receive funds for Metaion and Alkhem</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-xs text-blue-400 mt-1.5 mr-3"></i>
+                                        <span>Ensures coherence of all initiatives under the Weaver's narrative</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <p class="text-sm text-blue-200">The fourth anchor point is destined to become the temple of the round table and Excalibur, a space where the Apis can build the central honeycomb of the network.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Aswan, Egypt -->
+                    <div class="glass-card rounded-xl overflow-hidden">
+                        <div class="h-2 bg-gradient-to-r from-red-500 to-yellow-500"></div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-center">Aswan, Egypt: The Portal</h3>
+                            
+                            <p class="mb-4">In the waters of the Nile, near Aswan, lies this crucial energy point where we seek to establish the base for the Alkhem project. We are exploring the possibility of acquiring one of the existing retreat spaces on the island, which would allow the team to design and anchor this important project.</p>
+                            
+                            <p>This point represents a particular challenge, as it requires the development of a legal structure in Egypt, a process that is already underway but needs resources and support to materialize.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Living Organization -->
+                    <div class="glass-card rounded-xl overflow-hidden md:col-span-2">
+                        <div class="h-2 bg-gradient-to-r from-green-500 to-teal-500"></div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold mb-4 text-center">Towards a Living Organization</h3>
+                            
+                            <p class="mb-6">In our constant quest to embody the principles of the Weaver, we are exploring new forms of organization that transcend conventional institutional structures.</p>
+                            
+                            <p class="mb-6">Enhancing the future through the inspiration of our biological natural origins.</p>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="text-xl font-bold mb-3">Organic Evolution</h4>
+                                    <p>Our goal is to develop a system based on energetic biology—a living organism that responds, adapts and evolves naturally, rather than a rigid institution with static hierarchies.</p>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="text-xl font-bold mb-3">Resonant Communication</h4>
+                                    <p>We seek to create channels that function more like neural networks than command chains, where information flows organically and multidirectionally, inspired by natural systems like mycelial networks and bee colonies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Currently Running Projects Section -->
+            <div class="glass-card rounded-3xl p-12 mb-20">
+                <h2 class="text-4xl font-bold mb-6 gradient-text">Currently Running Projects</h2>
+                <p class="text-xl mb-12 text-center">(2025 and ongoing)</p>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Projects 1-4 -->
+                    <div>
+                        <div class="glass-card rounded-xl p-8 mb-8 focus-card bg-gradient-to-br from-transparent to-purple-900/30">
+                            <h3 class="text-2xl font-bold mb-4">1. THE CENTRAL UMBRELLA: YOSOY (I AM)</h3>
+                            <p class="mb-4">The YOSOY initiative is the core structure that holds all planetary tasks and spiritual journeys led by Matias and his network. It includes:</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-purple-400 mt-1.5 mr-3"></i>
+                                    <span>Harwitum Path</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-purple-400 mt-1.5 mr-3"></i>
+                                    <span>RomaAmor</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-purple-400 mt-1.5 mr-3"></i>
+                                    <span>Path of the Dragon</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-purple-400 mt-1.5 mr-3"></i>
+                                    <span>Path of the I AM</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-purple-400 mt-1.5 mr-3"></i>
+                                    <span>Global Activations (2012-2022)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="glass-card rounded-xl p-8 mb-8 focus-card bg-gradient-to-br from-transparent to-blue-900/30">
+                            <h3 class="text-2xl font-bold mb-4">2. CONTENT PRODUCTION & SPIRITUAL GUIDANCE</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-blue-400 mt-1.5 mr-3"></i>
+                                    <span>Expansion of "I & AM Conversations" (12-book series)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-blue-400 mt-1.5 mr-3"></i>
+                                    <span>YouTube, series like "The Rememberer", Gaia and Younity</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-blue-400 mt-1.5 mr-3"></i>
+                                    <span>Initiatic trips guided by Matias</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="glass-card rounded-xl p-8 mb-8 focus-card bg-gradient-to-br from-transparent to-green-900/30">
+                            <h3 class="text-2xl font-bold mb-4">3. THE HISTORICAL JOURNEY</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-green-400 mt-1.5 mr-3"></i>
+                                    <span>2012: Gathering 11:11 - 45 countries, 7 continents, subconscious healing through sacred geography</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-green-400 mt-1.5 mr-3"></i>
+                                    <span>2022-2024: Crystal Network Seeding</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-green-400 mt-1.5 mr-3"></i>
+                                    <span>2025-2029: Time Alignment & Holi Nada manifestivals + Rainbow Bridge Gatherings</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="glass-card rounded-xl p-8 focus-card bg-gradient-to-br from-transparent to-pink-900/30">
+                            <h3 class="text-2xl font-bold mb-4">4. UPCOMING PROJECTS & NEW DIRECTION</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-pink-400 mt-1.5 mr-3"></i>
+                                    <span>Documentary about awakening, sacred site adventures</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-pink-400 mt-1.5 mr-3"></i>
+                                    <span>Matias as channel for The Weaver</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-pink-400 mt-1.5 mr-3"></i>
+                                    <span>Recordings stored in Recordis</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-pink-400 mt-1.5 mr-3"></i>
+                                    <span>Podcasts to share the metaphysics behind the journey</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Projects 5-7 -->
+                    <div>
+                        <div class="glass-card rounded-xl p-8 mb-8 focus-card bg-gradient-to-br from-transparent to-yellow-900/30">
+                            <h3 class="text-2xl font-bold mb-4">5. ONTOS LIECHTENSTEIN & THE APIS</h3>
+                            <p class="font-bold mb-2">The APIS Group</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-yellow-400 mt-1.5 mr-3"></i>
+                                    <span>A collective of manifestors ("bees")</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-yellow-400 mt-1.5 mr-3"></i>
+                                    <span>Brings resources and projects to life</span>
+                                </li>
+                            </ul>
+                            
+                            <p class="font-bold mb-2">Two Key Projects:</p>
+                            <ol class="list-decimal list-inside space-y-4 pl-4">
+                                <li>
+                                    <span class="font-semibold">Spira App</span> - Platform for Ontocracy education
+                                </li>
+                                <li>
+                                    <span class="font-semibold">Alkhem Temple</span> - First real-world Ontocracy prototype in Aswan, Egypt
+                                    <ul class="pl-6 pt-2">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-circle text-xs text-yellow-400 mt-1.5 mr-3"></i>
+                                            <span>Near Bir Tawil, representing the seed of the new world</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div class="glass-card rounded-xl p-8 mb-8 focus-card bg-gradient-to-br from-transparent to-orange-900/30">
+                            <h3 class="text-2xl font-bold mb-4">6. BIR TAWIL - THE INSPIRATION</h3>
+                            <p class="mb-4">Bir Tawil is not just a location—it's a mythical symbol for the beginning of a new era.</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-orange-400 mt-1.5 mr-3"></i>
+                                    <span>Associated with the Tree of Life and Acacia, once in the Garden of Eden</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-orange-400 mt-1.5 mr-3"></i>
+                                    <span>A sacred spot by the Nile now reimagined through the Metaverse and sacred tech</span>
+                                </li>
+                            </ul>
+                            
+                            <p class="font-bold mb-2">The Vision: A Virtual Nation</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-orange-400 mt-1.5 mr-3"></i>
+                                    <span>Anchored in Bir Tawil</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-orange-400 mt-1.5 mr-3"></i>
+                                    <span>Supported by servers in the world's 24 smallest independent micronations</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-orange-400 mt-1.5 mr-3"></i>
+                                    <span>A way to prototype global systems without geopolitical tension</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="glass-card rounded-xl p-8 focus-card bg-gradient-to-br from-transparent to-indigo-900/30">
+                            <h3 class="text-2xl font-bold mb-4">7. TOWARDS TRANSFORMATION - THE TAO VISION</h3>
+                            <p class="mb-4">We look forward to transformation not just of the world, but of ourselves.</p>
+                            <p class="mb-4">Our intention is to create a DAO-inspired structure, which in our case we call TAO: a Transcendental Autonomous Organism. A living system aligned with the philosophy of the path, where structures are:</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-indigo-400 mt-1.5 mr-3"></i>
+                                    <span>Simplified and efficient</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-indigo-400 mt-1.5 mr-3"></i>
+                                    <span>Collaborative instead of hierarchical</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-indigo-400 mt-1.5 mr-3"></i>
+                                    <span>With no employees, only contributors in the adventure</span>
+                                </li>
+                            </ul>
+                            <p class="mb-4">TAO functions as an incubator, a bridge between those who carry ideas and those who carry resources, all woven together by the vision of the Weaver.</p>
+                            <p>We embrace transformation as a constant, open to evolve, to learn, and to co-create with everyone who feels the call.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Call to Action Section -->
+            <div class="glass-card rounded-3xl p-12 mb-20">
+                <h2 class="text-4xl font-bold mb-8 gradient-text text-center">The Call to the Hive</h2>
+                
+                <p class="text-xl mb-6 text-center">We are not building a new order.</p>
+                
+                <p class="text-xl mb-10 text-center">We are awakening a beehive—a living, buzzing network of creators, dreamers, and builders who know that the future is not a destination, but a memory we are remembering together.</p>
+                
+                <div class="max-w-xl mx-auto text-center">
+                    <p class="text-2xl mb-6">So...</p>
+                    <p class="text-2xl mb-10">Will you be one of us?<br>Will you help us weave the golden thread back into the heart of time?</p>
+                    
+                    <a href="#" class="inline-block py-3 px-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold text-white hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl">Join the Journey</a>
+                </div>
+            </div>
+            
+            <!-- Contact Section -->
+            <div class="glass-card rounded-3xl p-12">
+                <h2 class="text-4xl font-bold mb-8 gradient-text text-center">Contact Us</h2>
+                
+                <div class="max-w-2xl mx-auto text-center">
+                    <h3 class="text-2xl font-bold mb-6">Get in Touch</h3>
+                    <p class="text-lg mb-10">If you feel called to participate in this cosmic adventure, or if you have questions about any aspect of our work, please don't hesitate to reach out to us.</p>
+                    
+                    <div class="flex justify-center items-center space-x-8">
+                        <div class="flex flex-col items-center">
+                            <div class="h-14 w-14 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mb-4">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <p class="text-lg font-semibold">Email</p>
+                            <p>dannie@ontos.red</p>
+                        </div>
+                        
+                        <div class="flex flex-col items-center">
+                            <div class="h-14 w-14 rounded-full bg-gradient-to-r from-pink-500 to-orange-500 flex items-center justify-center mb-4">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </div>
+                            <p class="text-lg font-semibold">Instagram</p>
+                            <p>ontos_cosmos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Add floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('span');
+                particle.className = 'particle';
+                
+                // Random size
+                const size = Math.random() * 3 + 1;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random position
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                
+                // Random opacity
+                particle.style.opacity = Math.random() * 0.5 + 0.1;
+                
+                // Random animation
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 5;
+                particle.style.animation = `floating ${duration}s ease-in-out ${delay}s infinite alternate`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
